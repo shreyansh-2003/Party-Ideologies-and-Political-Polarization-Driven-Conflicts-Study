@@ -3,7 +3,7 @@
 This repository contains the code and data for the paper "Party Ideologies and Political Polarization-Driven Conflicts: A Study of the Global South".
 
 <p align="center">
-  <img src="assets/figs/png/enhanced_conflict_map.png" alt="Global Conflict Map" width="60%" />
+  <img src="assets/figs/png/enhanced_conflict_map.png" alt="Global Conflict Map" width="70%" />
   <br>
   <em><strong>Figure 1:</strong> World Map of Conflict Related Death Rate. A visual depiction of the global distribution of conflict-related deaths (1989–2023), normalized per 100,000 population and regime duration. The map reveals substantially higher conflict intensity in the Global South, particularly across Africa and parts of Latin America.</em>
 </p>
@@ -57,7 +57,7 @@ This study examines how political identity-induced polarization affects armed co
 - Identifies significant differences between regional model coefficients
 
 <p align="center">
-  <img src="assets/figs/png/chow's/Chow_Test_Heatmap.png" alt="Chow Test Heatmap" width="35%" />
+  <img src="assets/figs/png/chow's/Chow_Test_Heatmap.png" alt="Chow Test Heatmap" width="45%" />
   <br>
   <em><strong>Figure 2:</strong> Heatmap of Chow's Regional Heterogeneity Test. The figure visualises the pairwise Chow's test results using −log₁₀ transformed p-values, where darker burgundy indicates stronger statistical significance. Cross marks (×) represent non-significant differences (p > 0.05). The Middle East & North Africa exhibits the strongest structural breaks with other regions.</em>
 </p>
@@ -68,8 +68,8 @@ This study examines how political identity-induced polarization affects armed co
 - Accounts for nested data structure and random effects
 
 <p align="center">
-  <img src="assets/figs/png/baseline_model_arch.png" alt="Baseline Model" width="35%" />
-  <img src="assets/figs/png/regionwise_model_arch.png" alt="Region-wise Model" width="35%" />
+  <img src="assets/figs/png/baseline_model_arch.png" alt="Baseline Model" width="41%" />
+  <img src="assets/figs/png/regionwise_model_arch.png" alt="Region-wise Model" width="41%" />
   <br>
   <em><strong>Figure 3:</strong> Mixed Effects Multilevel Modelling Structure. (a) The baseline model has three nested levels: Region (N_groups = 4), Countries (N_groups vary), Era's (N_groups = 5, barring some countries). (b) The auxiliary modelling strategy creates separate mixed effects models for each region using 2 levels: Country and Era.</em>
 </p>
@@ -79,8 +79,8 @@ This study examines how political identity-induced polarization affects armed co
 **Results Visualization:**
 
 <p align="center">
-  <img src="assets/figs/png/region_all_coefficients_events.png" alt="Regional Coefficients Events" width="42%" style="margin-right:1%;">
-  <img src="assets/figs/png/region_all_coefficients_deaths.png" alt="Regional Coefficients Deaths" width="42%">
+  <img src="assets/figs/png/region_all_coefficients_events.png" alt="Regional Coefficients Events" width="49%" style="margin-right:1%;">
+  <img src="assets/figs/png/region_all_coefficients_deaths.png" alt="Regional Coefficients Deaths" width="49%">
   <br>
   <em><strong>Figure 4:</strong> (a) Significant Coefficients for Conflict Event Rate (Intensity). The control variables (Freedom of Expression, Average Term Population) maintain consistent significance across multiple regions. Region-specific models show distinct patterns with MENA uniquely influenced by Economic Left-Right Scale Polarization, while Asia Pacific is affected by identity-based polarization (Gender Equality, Minority Rights). (b) Significant Coefficients for Conflict Death Rate (Severity). Freedom controls (Religious Freedom, Freedom of Expression) appear consistently across regions. MENA's death rate is distinctly driven by LGBT Social Equality Polarization (negative) and Religious Principles Polarization (positive), while Latin America exhibits interplay of Political Pluralism and Violence Rejection.</em>
 </p>
