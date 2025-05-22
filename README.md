@@ -1,17 +1,22 @@
 # Party Ideologies and Political Polarization-Driven Conflicts: A Study of the Global South
 
 This repository contains the code and data for the paper "Party Ideologies and Political Polarization-Driven Conflicts: A Study of the Global South".
-![Global Conflict Intensity Map](assets/figs/enhanced_conflict_map.pdf)
 
+<p align="center">
+  <img src="assets/figs/png/enhanced_conflict_map.png" alt="Global Conflict Map" width="60%" />
+  <br>
+  <em><strong>Figure 1:</strong> World Map of Conflict Related Death Rate. A visual depiction of the global distribution of conflict-related deaths (1989–2023), normalized per 100,000 population and regime duration. The map reveals substantially higher conflict intensity in the Global South, particularly across Africa and parts of Latin America.</em>
+</p>
 
 ## Abstract
+
 This study examines how political identity-induced polarization affects armed conflicts in Global South regions. Using polarization indices based on party stances from the V-Party Dataset and conflict data from UCDP, we analyze the relationship between political fragmentation and violence across four regions: Middle East & North Africa, Sub-Saharan Africa, Latin America & Caribbean, and Asia & Pacific.
 
 **Key Findings:**
-- Regional structural breaks exist between regions in polarization-conflict dynamics
-- Religious Principles and Minority Rights polarization strongly predict conflict
-- Different types of polarization affect different regions uniquely
-- Mixed-effects modeling reveals significant country and era-level effects
+- Regional structural breaks exist between regions in polarization-conflict dynamics  
+- Religious Principles and Minority Rights polarization strongly predict conflict  
+- Different types of polarization affect different regions uniquely  
+- Mixed-effects modeling reveals significant country and era-level effects  
 
 ## Repository Structure
 
@@ -27,9 +32,9 @@ This study examines how political identity-induced polarization affects armed co
 
 ## Data Sources
 
-- **Political Identities**: V-Party Dataset (V-Dem Project) - party stances and ideologies
-- **Conflicts**: Uppsala Conflict Data Program (UCDP) - georeferenced conflict events
-- **Controls**: World Bank (GDP, Gini), V-Dem (freedom indices, population)
+- **Political Identities**: V-Party Dataset (V-Dem Project) - party stances and ideologies  
+- **Conflicts**: Uppsala Conflict Data Program (UCDP) - georeferenced conflict events  
+- **Controls**: World Bank (GDP, Gini), V-Dem (freedom indices, population)  
 
 ## Methodology
 
@@ -51,7 +56,11 @@ This study examines how political identity-induced polarization affects armed co
 - Tests for regional heterogeneity in polarization-conflict relationships
 - Identifies significant differences between regional model coefficients
 
-![Chow Test Heatmap](assets/figs/chow's/Chow_Test_Heatmap.pdf)
+<p align="center">
+  <img src="assets/figs/png/chow's/Chow_Test_Heatmap.png" alt="Chow Test Heatmap" width="35%" />
+  <br>
+  <em><strong>Figure 2:</strong> Heatmap of Chow's Regional Heterogeneity Test. The figure visualises the pairwise Chow's test results using −log₁₀ transformed p-values, where darker burgundy indicates stronger statistical significance. Cross marks (×) represent non-significant differences (p > 0.05). The Middle East & North Africa exhibits the strongest structural breaks with other regions.</em>
+</p>
 
 **Mixed Effects Modeling:**
 - Baseline 3-level model: Region → Country → Era
@@ -59,40 +68,45 @@ This study examines how political identity-induced polarization affects armed co
 - Accounts for nested data structure and random effects
 
 <p align="center">
-  <img src="assets/figs/baseline_model_arch.pdf" alt="Baseline Model" width="45%" />
-  <img src="assets/figs/regionwise_model_arch.pdf" alt="Region-wise Model" width="45%" />
+  <img src="assets/figs/png/baseline_model_arch.png" alt="Baseline Model" width="35%" />
+  <img src="assets/figs/png/regionwise_model_arch.png" alt="Region-wise Model" width="35%" />
+  <br>
+  <em><strong>Figure 3:</strong> Mixed Effects Multilevel Modelling Structure. (a) The baseline model has three nested levels: Region (N_groups = 4), Countries (N_groups vary), Era's (N_groups = 5, barring some countries). (b) The auxiliary modelling strategy creates separate mixed effects models for each region using 2 levels: Country and Era.</em>
 </p>
-
 
 ### 3. Visualization & Validation (`visualisations.ipynb`)
 
 **Results Visualization:**
-- Regional coefficient comparisons
-- Variance decomposition (ICC, R²)
-- Global conflict intensity mapping
 
-
-
-![Regional Coefficients - Events](assets/figs/region_all_coefficients_events.pdf)
-![Regional Coefficients - Deaths](assets/figs/region_all_coefficients_deaths.pdf)
-
+<p align="center">
+  <img src="assets/figs/png/region_all_coefficients_events.png" alt="Regional Coefficients Events" width="42%" style="margin-right:1%;">
+  <img src="assets/figs/png/region_all_coefficients_deaths.png" alt="Regional Coefficients Deaths" width="42%">
+  <br>
+  <em><strong>Figure 4:</strong> (a) Significant Coefficients for Conflict Event Rate (Intensity). The control variables (Freedom of Expression, Average Term Population) maintain consistent significance across multiple regions. Region-specific models show distinct patterns with MENA uniquely influenced by Economic Left-Right Scale Polarization, while Asia Pacific is affected by identity-based polarization (Gender Equality, Minority Rights). (b) Significant Coefficients for Conflict Death Rate (Severity). Freedom controls (Religious Freedom, Freedom of Expression) appear consistently across regions. MENA's death rate is distinctly driven by LGBT Social Equality Polarization (negative) and Religious Principles Polarization (positive), while Latin America exhibits interplay of Political Pluralism and Violence Rejection.</em>
+</p>
 
 **Robustness Checks:**
 - Residual diagnostics (normality, homoscedasticity, linearity)
 - Cook's distance outlier detection
 - Multicollinearity assessment (VIF)
 
-![Residual Analysis Example](assets/figs/hetro_linearity/Middle_East_and_North_Africa_residuals.pdf)
-
+<p align="center">
+  <img src="assets/figs/png/hetro_linearity/Middle East and North Africa_residuals.png" alt="Residual Analysis" width="50%" />
+  <br>
+  <em><strong>Figure 5:</strong> Residuals vs Fitted Values Plot (Homoscedasticity and Linearity Assumption). Residual plots show homoscedastic errors confirmed by non-significant p-values from the Breusch & Pagan test. Linearity is assessed via Pearson's Correlation, showing weak to moderate residual correlations indicating good model fit.</em>
+</p>
 
 ## Key Results
 
 ### Regional Structural Breaks
+
 5 out of 6 regional pairs show significant structural breaks, indicating distinct polarization-conflict dynamics across regions.
 
-
-![Structural Breaks Network](assets/figs/structural_breaks_network.pdf)
-
+<p align="center">
+  <img src="assets/figs/png/structural_breaks_network.png" alt="Structural Breaks Network" width="50%" />
+  <br>
+  <em><strong>Figure 6:</strong> Network Visualization of Regional Structure Breaks in Conflict-Polarization Dynamics. Solid burgundy lines show breaks in both death and event rates, dashed lines show breaks in death (blue) or event rates (green). Sub-Saharan Africa and Asia & Pacific show most similar coefficients with no breaks (dotted gray line).</em>
+</p>
 
 ### Significant Polarization Predictors
 
@@ -108,30 +122,32 @@ This study examines how political identity-induced polarization affects armed co
 - **Asia-Pacific**: Gender Equality (negative), Anti-Elitism (negative)
 
 ### Model Performance
-- **R² Conditional**: 0.73-1.00 across regions (high explanatory power)
+
+- **R² Conditional**: 0.73–1.00 across regions (high explanatory power)
 - **ICC Values**: Low country/era clustering (<15%), indicating good model fit
 - **Heteroscedasticity**: Only Sub-Saharan Africa models show residual heteroscedasticity
 
-
-
 ## Helper Functions (`src/`)
-- `coeff_importance.py`: Regional coefficient visualization
-- `cooks_distance.py`: Outlier detection and analysis
-- `hetroskedasticity.py`: Residual diagnostics
-- `icc_r2.py`: Variance decomposition plots
-- `normality.py`: Q-Q plot generation
+
+- `coeff_importance.py`: Regional coefficient visualization  
+- `cooks_distance.py`: Outlier detection and analysis  
+- `hetroskedasticity.py`: Residual diagnostics  
+- `icc_r2.py`: Variance decomposition plots  
+- `normality.py`: Q-Q plot generation  
 
 ## Data Files
 
 ### Processed Data
-- `data/political identities/X.csv`: Polarization indices and controls
-- `data/conflicts/Y_conflicts.csv`: Conflict rates by regime
-- `data/modelling/*.pkl`: Fitted model objects
+
+- `data/political identities/X.csv`: Polarization indices and controls  
+- `data/conflicts/Y_conflicts.csv`: Conflict rates by regime  
+- `data/modelling/*.pkl`: Fitted model objects  
 
 ### Raw Data Sources
-- V-Party Dataset: `data/political identities/V-Dem-CPD-Party-V2.csv`
-- UCDP GED: `data/conflicts/ged241-csv.zip`
-- World Bank indicators: `data/controls/`
+
+- V-Party Dataset: `data/political identities/V-Dem-CPD-Party-V2.csv`  
+- UCDP GED: `data/conflicts/ged241-csv.zip`  
+- World Bank indicators: `data/controls/`  
 
 ## Citation
 
@@ -142,4 +158,3 @@ This study examines how political identity-induced polarization affects armed co
   institution={Oxford Internet Institute, University of Oxford},
   year={2024}
 }
-```
