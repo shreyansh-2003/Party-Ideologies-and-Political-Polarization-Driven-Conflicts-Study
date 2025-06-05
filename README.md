@@ -1,5 +1,16 @@
 # Party Ideologies and Political Polarization-Driven Conflicts: A Study of the Global South
 
+<p align="center">
+  <a href="https://www.arxiv.org/abs/2506.02004">
+    <img src="https://img.shields.io/badge/Paper-arXiv:2506.02004-red">
+  </a>
+  &nbsp;
+  <a href="## Citation">
+    <img src="https://img.shields.io/badge/Paper-BibTex-yellow">
+  </a>
+</p>
+
+
 This repository contains the code and data for the paper "Party Ideologies and Political Polarization-Driven Conflicts: A Study of the Global South".
 
 <p align="center">
@@ -152,9 +163,13 @@ This study examines how political identity-induced polarization affects armed co
 ## Citation
 
 ```bibtex
-@article{padarha2024political,
-  title={Party Ideologies and Political Polarization-Driven Conflicts: A Study of the Global South},
-  author={Padarha, Shreyansh},
-  institution={Oxford Internet Institute, University of Oxford},
-  year={2024}
+@article{padarha202polarizationconflict,
+      title={Party Ideologies and Political Polarization-Driven Conflicts: A Study of the Global South}, 
+      author={Shreyansh Padarha},
+      year={2025},
+      eprint={2506.02004},
+      archivePrefix={arXiv},
+      primaryClass={physics.soc-ph},
+      url={https://arxiv.org/abs/2506.02004}, 
 }
+```
