@@ -4,8 +4,8 @@
   <a href="https://www.arxiv.org/abs/2506.02004">
     <img src="https://img.shields.io/badge/Paper-arXiv:2506.02004-red">
   </a>
-  &nbsp;
-  <a href="## Citation">
+
+  <a href="citation-section">
     <img src="https://img.shields.io/badge/Paper-BibTex-yellow">
   </a>
 </p>
@@ -161,6 +161,7 @@ This study examines how political identity-induced polarization affects armed co
 - World Bank indicators: `data/controls/`  
 
 ## Citation
+<a name="citation-section"></a>
 
 ```bibtex
 @article{padarha202polarizationconflict,
