@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/badge/Paper-arXiv:2506.02004-red">
   </a>
 
-  <a href="citation-section">
+  <a href="#Citation">
     <img src="https://img.shields.io/badge/Paper-BibTex-yellow">
   </a>
 </p>
